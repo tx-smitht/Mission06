@@ -32,7 +32,18 @@ namespace DateMe.Controllers
         [HttpPost]
         public IActionResult FillOutApplication(ApplicationResponse ar)
         {
-            return View("Confirmation", ar); // This is like context in Django
+            // This checks if all the form has everything that it needs to 
+            if (ModelState.IsValid)
+            {
+                return View("Confirmation", ar); // This is like context in Django
+            }
+            else
+            {
+                // If it is missing things, it will return the application page with
+                // the error messages
+                return View("DatingApplication");
+            }
+            
         }
 
         public IActionResult Privacy()
