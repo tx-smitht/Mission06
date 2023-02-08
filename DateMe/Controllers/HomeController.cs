@@ -23,6 +23,18 @@ namespace DateMe.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult FillOutApplication()
+        {
+            return View("DatingApplication");
+        }
+
+        [HttpPost]
+        public IActionResult FillOutApplication(ApplicationResponse ar)
+        {
+            return View("Confirmation", ar); // This is like context in Django
+        }
+
         public IActionResult Privacy()
         {
             return View();

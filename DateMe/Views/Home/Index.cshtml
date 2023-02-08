@@ -1,8 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Date Me";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Date Me!</h1>
+
+<div>
+    <p>
+        Today is your lucky day! You get to look at me and behold
+        my beauty
+    </p>
+    <img src="~/img/080A0504.jpg" height="300" />
+</div>
+<br /><br />
+<div>
+    @* These are tag helpers! the asp controller thing *@
+    <a asp-controller="Home" asp-action="FillOutApplication" >Fill out application</a>
 </div>
